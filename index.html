@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.11.1/p5.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.11.1/addons/p5.sound.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta charset="utf-8" />
+    
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Comfortaa:wght@300..700&family=MedievalSharp&display=swap" rel="stylesheet">
+
+  </head>
+  
+  <body>
+    <main>
+      <div class="passo ativo" id="passo 0">
+        <img src="logo.png">
+        <p>
+Em um mundo vasto e mágico chamado Teyvat, onde os elementos controlam a vida e os deuses governam as nações, uma jovem guerreira chamada Lumine busca desesperadamente por sua irmã gêmea, Melina. As duas foram separadas por uma força misteriosa, e Lumine agora vaga pelas terras, enfrentando perigos e formando alianças. Lumine é uma viajante de cabelos dourados e olhos brilhantes, cujas habilidades em combate e determinação conquistam a admiração de muitos. Sua jornada a leva a Mondstadt, uma cidade governada pelo deus do vento, Barbatos, e conhecida por sua liberdade e beleza natural.  
+O início de sua história coloca Lumine diante de escolhas difíceis. Sua determinação a levará a diferentes caminhos, que moldarão o destino de Teyvat e, possivelmente, a reunirão com sua irmã.  
+        </p>
+        
+        <button class="proximo" data-proximo="1">
+         Permanecer em Mondstadt e ajudar Barbatos a proteger a cidade.
+        </button>
+        
+        <button class="proximo" data-proximo="2">
+          Deixar Mondstadt e explorar outras regiões em busca de pistas sobre Melina
+        </button>
+        
+      </div>
+      
+      <div class="passo" id="passo-2">
+        <img src="logo.png">
+        <p>
+          Lumine, determinada a encontrar respostas sobre Melina, decide viajar para as terras de Liyue e Inazuma, onde outros deuses governam com diferentes filosofias e poderes. Sua busca a coloca em meio a conflitos, mas também lhe oferece novas alianças.
+        </p>
+        
+        <button class="proximo" data-proximo="5">
+          Lumine viaja para Liyue e busca ajuda de Morax, o deus da terra.
+        </button>
+        
+        <button class="proximo" data-proximo="6">
+         Lumine viaja para Inazuma e tenta se aliar a Raiden Shogun, a deusa da eternidade.
+        </button>
+        </div>
+      
+      <div class="passo" id="passo-5">
+        <img src="logo.png">
+        <p>
+          Em Liyue, Lumine se alia a **Morax**, o deus da terra e comércio, ajudando a resolver conflitos locais. Durante sua estadia, ela ouve rumores de que a Ordem do Abismo está ativa na região e decide investigar.
+        </p>
+        
+        <button class="proximo" data-proximo="7">
+          Lumine decide confrontar diretamente os agentes da Ordem. 
+        </button>
+        
+        <button class="proximo" data-proximo="8">
+          Lumine fortalece sua aliança com Morax antes de agir.  
+        </button>
+        
+        </div>
+      
+      <div class="passo" id="passo-6">
+        <img src="perdeu.png">
+        <p>
+          Em Inazuma, Lumine tenta ganhar a confiança de **Raiden Shogun**, mas a deusa está focada em seus próprios objetivos e no Decreto da Eternidade. Sem apoio suficiente, Lumine enfrenta resistência e é forçada a recuar.  
+
+        </p>
+        
+        <button class="proximo" data-proximo="0">
+          Reiniciar?
+        </button>
+        
+        </div>
+      
+      <div class="passo" id="passo-7">
+        <img src="ganhou.png">
+        <p>
+          Com coragem e determinação, Lumine enfrenta os agentes da Ordem do Abismo em uma batalha intensa. Graças à sua habilidade e tática, ela sai vitoriosa e descobre informações cruciais sobre a localização de sua irmã.  
+
+        </p>
+        
+        <button class="proximo" data-proximo="0">
+          Reiniciar?
+        </button>
+        
+        </div>
+      
+      <div class="passo" id="passo-8">
+        <img src="logo.png">
+        <p>
+          Após fortalecer suas alianças e reunir novas informações, Lumine retorna à encruzilhada inicial, preparada para decidir seu próximo passo com mais sabedoria.  
+
+        </p>
+        
+        <button class="proximo" data-proximo="3">
+          Lumine segue as pistas sobre a força sombria e Melina.
+        </button>
+        
+        <button class="proximo" data-proximo="4">
+          Lumine ajuda Barbatos a derrotar uma grande ameaça e é recompensada com um poderoso artefato.  
+        </button>
+        
+        </div>
+      
+      <div class="passo" id="passo-3">
+        <img src="logo.png">
+        <p>
+          Seguindo as informações obtidas em Mondstadt, Lumine descobre que a força sombria está conectada à **Ordem do Abismo**, uma organização que busca desequilibrar Teyvat. Durante sua investigação, ela encontra evidências de que Melina pode estar envolvida. 
+        </p>
+        
+        <button class="proximo" data-proximo="9">
+          Lumine descobre que Melina é a líder da Ordem do Abismo.
+        </button>
+        
+        <button class="proximo" data-proximo="10">
+          Lumine decide atacar diretamente a sede da Ordem do Abismo.  
+        </button>
+        </div>
+      
+      <div class="passo" id="passo-4">
+        <img src="ganhou.png">
+        <p>
+          Lumine e Barbatos enfrentam uma criatura colossal que ameaça destruir Mondstadt. Com coragem e habilidade, Lumine derrota o inimigo, salvando a cidade. Barbatos a recompensa com uma **Gnosis**, um artefato divino que pode ajudá-la em sua busca. 
+        </p>
+        
+        <button class="proximo" data-proximo="0">
+          reiniciar?
+        
+        </button>
+        </div>
+      
+      <div class="passo" id="passo-10">
+        <img src="perdeu.png">
+        <p>
+          Confiante em suas forças, Lumine lidera um ataque contra a sede da Ordem do Abismo. No entanto, subestima o poder de Melina e de seus aliados. A batalha termina em derrota, e Lumine é forçada a fugir, jurando que ainda encontrará uma forma de salvar sua irmã. 
+        </p>
+        
+        <button class="proximo" data-proximo="0">
+          reiniciar?
+        
+        </button>
+        </div>
+      
+      <div class="passo" id="passo-9">
+        <img src="ganhou.png">
+        <p>
+          Lumine, chocada, confirma que sua irmã Melina é a líder da Ordem. Apesar da dor, ela decide confrontar Melina diretamente, usando tudo o que aprendeu em sua jornada para tentar salvá-la.  
+
+        </p>
+        
+        <button class="proximo" data-proximo="0">
+          reiniciar?
+        </button>
+        </div>
+      
+       <footer>
+     <p> jogo produzido por <a href="https://github.com/nicollyfurquim" class="nomelink"> Nicolly Espinoza </a></p>
+    </footer>
+      
+    </main>
+    <script src="sketch.js"></script>
+  </body>
+</html>
